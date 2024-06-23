@@ -1,4 +1,4 @@
-package com.project.eCommerce.product;
+package com.project.eCommerce.domain.product;
 
 public enum TypeProduct {
     TV,

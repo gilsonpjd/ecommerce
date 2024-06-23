@@ -1,6 +1,6 @@
-package com.project.eCommerce.order;
+package com.project.eCommerce.domain.order;
 
-import com.project.eCommerce.customer.Customer;
+import com.project.eCommerce.domain.customer.Customer;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

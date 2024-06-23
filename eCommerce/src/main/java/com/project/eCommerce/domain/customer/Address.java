@@ -1,4 +1,4 @@
-package com.project.eCommerce.customer;
+package com.project.eCommerce.domain.customer;
 
 public class Address {
     private String street;

@@ -1,4 +1,4 @@
-package com.project.eCommerce.order;
+package com.project.eCommerce.domain.order;
 
 public enum Status {
     PENDING,

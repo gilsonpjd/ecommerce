@@ -1,6 +1,5 @@
-package com.project.eCommerce.order;
+package com.project.eCommerce.domain.product;
 
-import com.project.eCommerce.product.Product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,15 +16,13 @@ import java.util.UUID;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProductOrder {
-
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID idProductOrder;
-
-    private Product product;
-
-    private int quantity;
-    private double valueOrderProduct;
+    private UUID idProduct;
+    private String nameProduct;
+    private Brand brand;
+    private TypeProduct type;
+    private double value;
 
 }

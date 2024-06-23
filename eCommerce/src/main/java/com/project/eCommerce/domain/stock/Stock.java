@@ -1,6 +1,6 @@
-package com.project.eCommerce.stock;
+package com.project.eCommerce.domain.stock;
 
-import com.project.eCommerce.product.Product;
+import com.project.eCommerce.domain.product.Product;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
