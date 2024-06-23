@@ -7,5 +7,5 @@ public enum TypeProduct {
     PHOTOGRAPH,
     SOUND,
     COMPUTER,
-    GAMES,
+    GAMES
 }

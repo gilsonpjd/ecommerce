@@ -21,6 +21,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProduct;
     private String nameProduct;
+    private Brand brand;
     private TypeProduct type;
     private double value;
 
