@@ -1,6 +1,7 @@
 package com.project.eCommerce.domain.customer;
 
 import com.project.eCommerce.domain.order.Order;
+import com.project.eCommerce.dto.customerDTO.CustomerRequest;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,4 +28,7 @@ public class Customer {
     @OneToMany
     private Order order;
 
+    public Customer(CustomerRequest customerRequest) {
+
+    }
 }
