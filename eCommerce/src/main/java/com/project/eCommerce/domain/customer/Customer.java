@@ -8,9 +8,11 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.UUID;
 
 @Entity
+@Table(name="tb_customer")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -26,7 +28,7 @@ public class Customer {
     private Address adress;
 
     @OneToMany
-    private Order order;
+    private List<Order> order;
 
     public Customer(CustomerRequest customerRequest) {
 

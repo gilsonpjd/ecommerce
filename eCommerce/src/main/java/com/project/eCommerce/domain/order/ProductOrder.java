@@ -1,18 +1,17 @@
 package com.project.eCommerce.domain.order;
 
 import com.project.eCommerce.domain.product.Product;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
+@Table(name="tb_productOrder")
 @Setter
 @Getter
 @NoArgsConstructor
@@ -26,6 +25,6 @@ public class ProductOrder {
     private Product product;
 
     private int quantity;
-    private double valueOrderProduct;
+    private BigDecimal valueOrderProduct;
 
 }

@@ -7,10 +7,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.UUID;
 
 @Entity
+@Table(name="tb_order")
 @Setter
 @Getter
 @NoArgsConstructor
@@ -22,7 +24,7 @@ public class Order {
     private UUID idOrder;
     private Date date;
     private Status status;
-    private double valueOrder;
+    private BigDecimal valueOrder;
 
     @ManyToOne
     private Customer customer;
