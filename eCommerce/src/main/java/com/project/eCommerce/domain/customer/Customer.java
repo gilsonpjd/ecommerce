@@ -2,6 +2,7 @@ package com.project.eCommerce.domain.customer;
 
 import com.project.eCommerce.domain.order.Order;
 import com.project.eCommerce.dto.customerDTO.CustomerRequest;
+import com.project.eCommerce.dto.customerDTO.CustomerResponse;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -24,7 +25,7 @@ public class Customer {
     private UUID idCustomer;
 
     @Column(name = "name")
-    private String userName;
+    private String name;
 
     @Column(name = "dateOfBirth")
     private Date dateOfBirth;
@@ -32,7 +33,7 @@ public class Customer {
     @Column(name="email")
     private String email;
 
-    @Column(name="cpf")
+    @Column(name="Cpf")
     private String cpf;
 
     @OneToOne
@@ -42,7 +43,16 @@ public class Customer {
     @OneToMany(mappedBy = "customer")
     private List<Order> order;
 
+
     public Customer(CustomerRequest customerRequest) {
+
+    }
+
+    public Customer(CustomerResponse customerResponse) {
+
+    }
+
+    public void setAdress(String street, String city, String country) {
 
     }
 }

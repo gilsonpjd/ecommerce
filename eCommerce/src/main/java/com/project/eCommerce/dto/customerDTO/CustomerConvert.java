@@ -7,9 +7,15 @@ import org.springframework.stereotype.Service;
 public class CustomerConvert {
 
 
-    public Customer toDomain (CustomerRequest customerRequest){
+    public Customer CustomerRequestToDomain(CustomerRequest customerRequest){
         return new Customer(customerRequest);
     }
+
+    public Customer CustomerResponseToDomain(CustomerResponse customerResponse){
+        return new Customer(customerResponse);
+    }
+
+
 
     public CustomerResponse toResponse(Customer customer) {
         return new CustomerResponse(customer);
