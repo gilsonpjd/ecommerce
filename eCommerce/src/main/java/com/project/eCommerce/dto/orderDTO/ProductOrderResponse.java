@@ -1,6 +1,5 @@
 package com.project.eCommerce.dto.orderDTO;
 
-import com.project.eCommerce.dto.productDTO.ProductResponse;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -8,8 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.stereotype.Component;
-
-import java.util.UUID;
 
 @Setter
 @Getter

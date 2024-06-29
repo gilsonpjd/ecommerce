@@ -1,6 +1,5 @@
 package com.project.eCommerce.domain.product;
 
-import com.project.eCommerce.domain.stock.Stock;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
