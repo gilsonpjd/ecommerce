@@ -24,11 +24,13 @@ public class ProductOrder {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProductOrder;
 
+    @Column(name = "quantity")
+    private int quantity;
+
+    @Column(name = "valueOrderProduct")
+    private BigDecimal valueOrderProduct;
+
     @OneToMany
     @JoinColumn(name="idProduct")
     private List<Product> product;
-
-    private int quantity;
-    private BigDecimal valueOrderProduct;
-
 }

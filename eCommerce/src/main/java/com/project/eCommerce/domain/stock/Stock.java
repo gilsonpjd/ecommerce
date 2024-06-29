@@ -25,9 +25,10 @@ public class Stock {
     private UUID idStock;
 
     @OneToMany
-    @JoinColumn(name="idProduct")
+    @JoinColumn(name="Product")
     private List<Product> products;
 
+    @Column(name="lastUpdate")
     private Date lastUpdate;
 
 

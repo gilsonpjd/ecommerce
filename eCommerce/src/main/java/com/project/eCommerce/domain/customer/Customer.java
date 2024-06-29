@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -22,13 +23,23 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idCustomer;
 
+    @Column(name = "name")
     private String userName;
 
+    @Column(name = "dateOfBirth")
+    private Date dateOfBirth;
+
+    @Column(name="email")
+    private String email;
+
+    @Column(name="cpf")
+    private String cpf;
+
     @OneToOne
-    @JoinColumn(name="idAddress")
+    @JoinColumn(name="address")
     private Address adress;
 
-    @OneToMany
+    @OneToMany(mappedBy = "customer")
     private List<Order> order;
 
     public Customer(CustomerRequest customerRequest) {

@@ -22,12 +22,18 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProduct;
+
+    @Column(name="nameProduct")
     private String nameProduct;
+
+    @Column(name="brand")
     private Brand brand;
+
+    @Column(name="type")
     private TypeProduct type;
+
+    @Column(name="value")
     private BigDecimal value;
 
-    @ManyToOne
-    private Stock stock;
 
 }

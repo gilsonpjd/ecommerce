@@ -24,16 +24,22 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idOrder;
+
+    @Column(name="date")
     private Date date;
+
+    @Column(name="status")
     private Status status;
+
+    @Column(name="valueOrder")
     private BigDecimal valueOrder;
 
     @ManyToOne
-    @JoinColumn(name="idCustomer")
+    @JoinColumn(name="Customer")
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name="idProductOrder")
+    @JoinColumn(name="ProductOrder")
     private ProductOrder productOrder;
 
 

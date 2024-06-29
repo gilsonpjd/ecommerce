@@ -1,5 +1,7 @@
 package com.project.eCommerce.dto.orderDTO;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,12 +18,10 @@ import java.util.UUID;
 @Component
 public class OrderResponse {
 
-    private UUID idOrderDTO;
-    private Date dateDTO;
+    @NotBlank(message = "The status field cannot be empty.")
     private String statusDTO;
+
+    @NotBlank(message = "The valueOrderDTO field cannot be empty.")
+    @Size(min = 3, max = 9)
     private double valueOrderDTO;
-    private UUID customerIdDTO;
-    private UUID productOrderIdDTO;
-
-
 }

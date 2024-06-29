@@ -18,7 +18,13 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idAddress;
+
+    @Column(name="street")
     private String street;
+
+    @Column(name="city")
     private String city;
+
+    @Column(name="country")
     private String country;
 }

@@ -2,6 +2,8 @@ package com.project.eCommerce.dto.stockDTO;
 
 import com.project.eCommerce.dto.productDTO.ProductResponse;
 import jakarta.persistence.Entity;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +22,8 @@ import java.util.UUID;
 @Component
 public class StockResponse {
 
-    private UUID idStockDTO;
-    private List<ProductResponse> productsDTO;
+    @NotBlank(message = "The date field cannot be empty.")
+    @Size(min = 8, max = 8)
     private Date lastUpdateDTO;
+
 }
