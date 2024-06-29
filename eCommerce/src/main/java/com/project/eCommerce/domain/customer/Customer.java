@@ -24,7 +24,7 @@ public class Customer {
 
     private String userName;
 
-    @ManyToMany
+    @OneToOne
     @JoinColumn(name="idAddress")
     private Address adress;
 
