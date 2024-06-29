@@ -8,21 +8,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name="tb_productOrder")
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name="tb_productOrder")
 public class ProductOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idProductOrder;
 
-    private Product product;
+    @OneToMany
+    @JoinColumn(name="idProduct")
+    private List<Product> product;
 
     private int quantity;
     private BigDecimal valueOrderProduct;

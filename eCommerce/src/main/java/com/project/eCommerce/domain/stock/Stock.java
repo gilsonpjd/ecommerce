@@ -11,17 +11,23 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name="tb_stock")
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name="tb_stock")
+
 public class Stock {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idStock;
+
+    @OneToMany
+    @JoinColumn(name="idProduct")
     private List<Product> products;
+
     private Date lastUpdate;
 
 

@@ -11,12 +11,12 @@ import lombok.Setter;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name="tb_customer")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name="tb_customer")
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +25,7 @@ public class Customer {
     private String userName;
 
     @ManyToMany
+    @JoinColumn(name="idAddress")
     private Address adress;
 
     @OneToMany

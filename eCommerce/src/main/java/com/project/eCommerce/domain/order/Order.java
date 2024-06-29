@@ -11,12 +11,14 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.UUID;
 
-@Entity
-@Table(name="tb_order")
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@Table(name="tb_order")
+
 public class Order {
 
     @Id
@@ -27,8 +29,11 @@ public class Order {
     private BigDecimal valueOrder;
 
     @ManyToOne
+    @JoinColumn(name="idCustomer")
     private Customer customer;
 
+    @ManyToOne
+    @JoinColumn(name="idProductOrder")
     private ProductOrder productOrder;
 
 
